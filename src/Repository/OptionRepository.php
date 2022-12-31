@@ -4,7 +4,7 @@ namespace App\Repository;
 
 use App\Entity\Option;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
-use Doctrine\Persistence\ManagerRegistry;
+use Symfony\Bridge\Doctrine\RegistryInterface;
 
 /**
  * @method Option|null find($id, $lockMode = null, $lockVersion = null)
@@ -14,14 +14,14 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class OptionRepository extends ServiceEntityRepository
 {
-    public function __construct(ManagerRegistry $registry)
+    public function __construct(RegistryInterface $registry)
     {
         parent::__construct($registry, Option::class);
     }
 
-    // /**
-    //  * @return Option[] Returns an array of Option objects
-    //  */
+//    /**
+//     * @return Option[] Returns an array of Option objects
+//     */
     /*
     public function findByExampleField($value)
     {

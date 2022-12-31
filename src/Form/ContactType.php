@@ -15,11 +15,11 @@ class ContactType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add("firstname", \Symfony\Component\Form\Extension\Core\Type\TextType::class)
-            ->add("lastname", TextType::class)
-            ->add("phone", TextType::class)
-            ->add("email", EmailType::class)
-            ->add("message", TextareaType::class)
+            ->add('firstname', TextType::class)
+            ->add('lastname', TextType::class)
+            ->add('phone', TextType::class)
+            ->add('email', EmailType::class)
+            ->add('message', TextareaType::class)
         ;
     }
 
@@ -29,4 +29,5 @@ class ContactType extends AbstractType
             'data_class' => Contact::class
         ]);
     }
+
 }

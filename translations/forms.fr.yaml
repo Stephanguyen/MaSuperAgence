@@ -1,10 +1,11 @@
-City: Ville
-Address: Adresse
 Title: Titre
-Price: Prix
 Rooms: Pièces
 Bedrooms: Chambres
+Floor: Etages
 Heat: Chauffage
-Floor: Etage
-Postal code: Code Postal
+Price: Prix
+City: Ville
+Address: Adresse
 Sold: Vendu
+Max price: Budget max
+Postal Code: Code postal

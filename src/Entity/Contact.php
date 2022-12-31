@@ -1,12 +1,10 @@
 <?php
-
-
 namespace App\Entity;
 
 use Symfony\Component\Validator\Constraints as Assert;
 
-class Contact
-{
+class Contact {
+
     /**
      * @var string|null
      * @Assert\NotBlank()
@@ -22,12 +20,12 @@ class Contact
     private $lastname;
 
     /**
- * @var string|null
- * @Assert\NotBlank()
- * @Assert\Regex(
- *     pattern="/[0-9]{10}/"
- * )
- */
+     * @var string|null
+     * @Assert\NotBlank()
+     * @Assert\Regex(
+     *  pattern="/[0-9]{10}/"
+     * )
+     */
     private $phone;
 
     /**
@@ -50,7 +48,7 @@ class Contact
     private $property;
 
     /**
-     * @return string|null
+     * @return null|string
      */
     public function getFirstname(): ?string
     {
@@ -58,15 +56,17 @@ class Contact
     }
 
     /**
-     * @param string|null $firstname
+     * @param null|string $firstname
+     * @return Contact
      */
-    public function setFirstname(?string $firstname): void
+    public function setFirstname(?string $firstname): Contact
     {
         $this->firstname = $firstname;
+        return $this;
     }
 
     /**
-     * @return string|null
+     * @return null|string
      */
     public function getLastname(): ?string
     {
@@ -74,15 +74,17 @@ class Contact
     }
 
     /**
-     * @param string|null $lastname
+     * @param null|string $lastname
+     * @return Contact
      */
-    public function setLastname(?string $lastname): void
+    public function setLastname(?string $lastname): Contact
     {
         $this->lastname = $lastname;
+        return $this;
     }
 
     /**
-     * @return string|null
+     * @return null|string
      */
     public function getPhone(): ?string
     {
@@ -90,15 +92,17 @@ class Contact
     }
 
     /**
-     * @param string|null $phone
+     * @param null|string $phone
+     * @return Contact
      */
-    public function setPhone(?string $phone): void
+    public function setPhone(?string $phone): Contact
     {
         $this->phone = $phone;
+        return $this;
     }
 
     /**
-     * @return string|null
+     * @return null|string
      */
     public function getEmail(): ?string
     {
@@ -106,15 +110,17 @@ class Contact
     }
 
     /**
-     * @param string|null $email
+     * @param null|string $email
+     * @return Contact
      */
-    public function setEmail(?string $email): void
+    public function setEmail(?string $email): Contact
     {
         $this->email = $email;
+        return $this;
     }
 
     /**
-     * @return string|null
+     * @return null|string
      */
     public function getMessage(): ?string
     {
@@ -122,11 +128,13 @@ class Contact
     }
 
     /**
-     * @param string|null $message
+     * @param null|string $message
+     * @return Contact
      */
-    public function setMessage(?string $message): void
+    public function setMessage(?string $message): Contact
     {
         $this->message = $message;
+        return $this;
     }
 
     /**
@@ -139,9 +147,13 @@ class Contact
 
     /**
      * @param Property|null $property
+     * @return Contact
      */
-    public function setProperty(?Property $property): void
+    public function setProperty(?Property $property): Contact
     {
         $this->property = $property;
+        return $this;
     }
+
+
 }
